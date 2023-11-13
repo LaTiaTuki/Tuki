@@ -56,16 +56,15 @@ function setupCalculator() {
 
 // Función para limpiar el display de la calculadora
 function clearDisplay() {
-    display.value = "";
     currentInput = "";
     firstOperand = "";
     operator = "";
+    display.value = currentInput;
 }
 
 // Función para agregar valores al display
 function appendToDisplay(value) {
-    console.log('appended', value)
-    let currentInput = display.value || ""; // Utiliza el valor actual o un string vacío
+    currentInput = display.value || ""; // Utiliza el valor actual o un string vacío
     if (value === '.') {
         if (!currentInput.includes('.')) {
             currentInput += value;
@@ -77,26 +76,17 @@ function appendToDisplay(value) {
 }
 
 // Función para establecer el operador
-function setOperator(op) {
-    console.log('op', op)
+const setOperator = (op) => {
     if (currentInput !== "") {
         firstOperand = currentInput;
         operator = op;
         currentInput = "";
+        display.value = "";
     }
 }
 
 // Función para realizar cálculos
 function calculate() {
-    console.log('calculate');
-    function calculate() {
-        console.log('calculate function called');
-        console.log('firstOperand:', firstOperand);
-        console.log('currentInput:', currentInput);
-        console.log('operator:', operator);
-    
-    }
-    
     if (firstOperand !== "" && currentInput !== "") {
         switch (operator) {
             case "+":
