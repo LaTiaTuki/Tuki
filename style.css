@@ -1,0 +1,73 @@
+/* Estilos para la calculadora */
+#calculator {
+    text-align: center;
+    margin: 20px;
+    max-width: 300px; 
+    margin: 0 auto; 
+}
+
+input[type="text"] {
+    width: calc(100% - 20px); /* Ajuste del margen */
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 5px;
+}
+
+/* Estilos para el formulario */
+#infoForm {
+    text-align: center;
+    margin: 20px;
+}
+
+input[type="text"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Estilos para la sección principal después del inicio de sesión */
+#mainContent {
+    display: none; 
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px; 
+    
+}
+
+
+#loginForm {
+    text-align: center;
+    margin: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"],
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#loginForm button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#loginForm button:hover {
+    background-color: #2980b9;
+}
